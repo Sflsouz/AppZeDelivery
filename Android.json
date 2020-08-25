@@ -1,0 +1,10 @@
+{
+  "automationName" : "UiAutomator2",
+  "udid": "330043b531b6743f",
+  "deviceName": "330043b531b6743f",
+  "platformName": "Android",
+  "appPackage": "com.cerveceriamodelo.modelonow",
+  "appActivity": ".MainActivity",
+  "noReset": true,
+  "app":""
+}
