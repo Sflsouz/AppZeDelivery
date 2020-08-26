@@ -7,7 +7,7 @@ import java.util.Properties;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class SetCapabilities {
+public class Setup {
 
 	private JSONParser parser;
 	private JSONObject json;
@@ -20,10 +20,19 @@ public class SetCapabilities {
 	private boolean noReset;
 	private String app;
 	private static String plataforma;
+	private static String APPID;
 
-	public SetCapabilities() throws IOException {
+	public Setup() throws IOException {
 		lerArquivoProperties();
 		definirPlataformaMobile();
+	}
+
+	public static String getAPPID() {
+		return APPID;
+	}
+
+	public void setAPPID(String _APPID) {
+		Setup.APPID = _APPID;
 	}
 
 	public String getAutomationName() {
@@ -63,7 +72,7 @@ public class SetCapabilities {
 	}
 
 	public void setPlataforma(String _plataforma) {
-		SetCapabilities.plataforma = _plataforma;
+		Setup.plataforma = _plataforma;
 	}
 
 	public void lerArquivoProperties() throws IOException {
@@ -71,7 +80,7 @@ public class SetCapabilities {
 		FileInputStream file = new FileInputStream("properties");
 		properties.load(file);
 		setPlataforma(properties.getProperty("properties.plataforma").toUpperCase());
-
+		setAPPID(properties.getProperty("properties.apiKey"));
 	}
 
 	public void definirPlataformaMobile() throws IOException {
@@ -80,8 +89,7 @@ public class SetCapabilities {
 			if (getPlataforma().equals("ANDROID")) {
 				json = (JSONObject) parser.parse(new FileReader("Android.json"));
 				setCaps();
-			} else
-				throw new Exception("Automação ainda não implementada para plataformas não Android");
+			} 
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -19,5 +19,6 @@ public class Contexto {
 	public static String opcaoPagamento;
 	public static float precoProduto;
 	public static int qtdProduto;
-	public static float totalPedido;	
+	public static float totalPedido;
+    public static String nomeCidadeAPI;
 }

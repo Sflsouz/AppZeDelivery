@@ -4,11 +4,14 @@ import java.io.IOException;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import apoio.Utils;
+
 public class Capabilities {
 	private DesiredCapabilities cap;
 
 	public Capabilities() throws IOException {
-		SetCapabilities setcap = new SetCapabilities();
+	    Utils.log("Iniciando aplicativo...");
+		Setup setcap = new Setup();
 		cap = new DesiredCapabilities();
 		cap.setCapability("automationName", setcap.getAutomationName());
 		cap.setCapability("udid", setcap.getUdid());

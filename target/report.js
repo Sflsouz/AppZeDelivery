@@ -1,16 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/vitrine/CompraProdutos.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/api/ApiClimaTempo.feature");
 formatter.feature({
-  "name": "Realizar compra de produtos no aplicativo do Ze",
-  "description": "Para finalizar uma compra\nComo usuário\nEu quero comprar alguns produtos",
-  "keyword": "Funcionalidade"
+  "name": "Variação do clima",
+  "description": "",
+  "keyword": "Funcionalidade",
+  "tags": [
+    {
+      "name": "@TestAPI"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Verificar a desistencia da compra de produtos e cancelamento da sacola.",
+  "name": "Verificar a API de clima se o nome enviado no Parametro está de acordo com a resposta",
   "description": "",
   "keyword": "Cenário",
   "tags": [
     {
-      "name": "@2021"
+      "name": "@TestAPI"
+    },
+    {
+      "name": "@Test"
     }
   ]
 });
@@ -18,61 +26,31 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "que estou logado no aplicativo do Ze",
+  "name": "executo a API de clima da cidade \"Cotia\" na unidade \"metric\"",
   "keyword": "Dado "
 });
 formatter.match({
-  "location": "PerfilSteps.que_estou_logado_aplicavo_Ze()"
+  "location": "ApiClimaTempoSteps.executo_api_clima_cidade_unidade(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "que realizo a pesquisa do produto \"Heineken\"",
+  "name": "o status de retorno da api é 200",
   "keyword": "E "
 });
 formatter.match({
-  "location": "VitrineSteps.que_realizo_a_pesquisa_do_produto(String)"
+  "location": "ApiClimaTempoSteps.valido_se_o_status_é(int)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "seleciono o item \"Heineken 330ml\" da lista",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "VitrineSteps.seleciono_o_item_lista(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "efetuo a compra de seis unidades do produto",
-  "keyword": "Quando "
-});
-formatter.match({
-  "location": "PedidosSteps.compra_seis_unidades_produto()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "valido a sacola de produtos",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "PedidosSteps.valido_sacola_produtos()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "desisto dos produtos e limpo a sacola",
+  "name": "o nome da cidade está igual ao valor enviado",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "PedidosSteps.desisto_dos_produtos_limpo_sacola()"
+  "location": "ApiClimaTempoSteps.nome_da_cidade_esta_igual_valor_enviado()"
 });
 formatter.result({
   "status": "passed"
