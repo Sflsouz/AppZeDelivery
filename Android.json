@@ -6,5 +6,7 @@
   "appPackage": "com.cerveceriamodelo.modelonow",
   "appActivity": ".MainActivity",
   "noReset": true,
-  "app":""
+  "app":"",
+  "autoGrantPermissions": "true",
+  "autoAcceptAlerts": "true"
 }

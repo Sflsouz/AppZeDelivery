@@ -29,6 +29,7 @@ public class Utils {
 
 	public static void aguardarElementoVisivel(MobileElement element) {
 		new WebDriverWait(Hooks.driver, 20).until(ExpectedConditions.visibilityOf(element));
+		
 	}
 
 	public static void fecharTeclado() {
@@ -61,5 +62,10 @@ public class Utils {
 		DecimalFormat df = new DecimalFormat("0.0#");
 		df.setRoundingMode(RoundingMode.HALF_UP);
 		return df.format(valor);
+	}
+	
+	public static void aguardarSegundos(int segundos) throws InterruptedException {
+		int seg = 1000*segundos;
+		Thread.sleep(seg);
 	}
 }

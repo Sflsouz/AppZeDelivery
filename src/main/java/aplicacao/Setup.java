@@ -17,6 +17,8 @@ public class Setup {
 	private String deviceName;
 	private String appPackage;
 	private String appActivity;
+	private String autoGrantPermissions;
+	private String autoAcceptAlerts;
 	private boolean noReset;
 	private String app;
 	private static String plataforma;
@@ -41,6 +43,15 @@ public class Setup {
 
 	public String getUdid() {
 		return udid;
+	}
+	
+
+	public String getAutoGrantPermissions() {
+		return autoGrantPermissions;
+	}
+
+	public String getAutoAcceptAlerts() {
+		return autoAcceptAlerts;
 	}
 
 	public String getPlatformName() {
@@ -80,7 +91,7 @@ public class Setup {
 		FileInputStream file = new FileInputStream("properties");
 		properties.load(file);
 		setPlataforma(properties.getProperty("properties.plataforma").toUpperCase());
-		setAPPID(properties.getProperty("properties.apiKey"));
+		setAPPID(properties.getProperty("properties.apiKey").toUpperCase());
 	}
 
 	public void definirPlataformaMobile() throws IOException {
@@ -89,7 +100,7 @@ public class Setup {
 			if (getPlataforma().equals("ANDROID")) {
 				json = (JSONObject) parser.parse(new FileReader("Android.json"));
 				setCaps();
-			} 
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -105,7 +116,8 @@ public class Setup {
 		appActivity = (String) json.get("appActivity");
 		noReset = (Boolean) json.get("noReset");
 		app = (String) json.get("app");
-
+		autoGrantPermissions = (String) json.get("autoGrantPermissions");
+		autoAcceptAlerts = (String) json.get("autoAcceptAlerts");
 	}
 
 }

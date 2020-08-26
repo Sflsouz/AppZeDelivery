@@ -21,6 +21,8 @@ public class Capabilities {
 		cap.setCapability("appActivity", setcap.getAppActivity());
 		cap.setCapability("noReset", setcap.isNoReset());
 		cap.setCapability("app", setcap.getApp());
+		cap.setCapability("autoGrantPermissions", setcap.getAutoAcceptAlerts());
+		cap.setCapability("autoAcceptAlerts", setcap.getAutoGrantPermissions());
 	}
 
 	public DesiredCapabilities getCapabilites() {
