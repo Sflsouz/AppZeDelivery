@@ -19,7 +19,7 @@ Para Executar a automação será necessário a instalação das seguintes ferra
    -C:\Users\nameUser\AppData\Local\Android\Sdk\platform-tools
    -C:\Program Files\nodejs\
    
- *Configurações Projeto
+ # Configurações Projeto
  - O projeto possui um arquivo properties, onde é necessário passar algums informações para execução do projeto
   properties.plataforma = Android
   properties.apiKey = chaveAPIClima
@@ -33,7 +33,8 @@ Para Executar a automação será necessário a instalação das seguintes ferra
   
   As capabilites são configuradas no arquivo Android.json no projeto.
   
- *Entendimento do Projeto
+ # Entendimento do Projeto
+ 
   Necessário que o aplicativo do Zé já esteja instalado no aparelho Simulador, ou Device fisico.
   O projeto também possui uma pasta evidências onde são armazenados os prints do cenarios que falharam.
   Um arquivo de log é gerado no caminho C:\Users\Public - log4j-application.log
