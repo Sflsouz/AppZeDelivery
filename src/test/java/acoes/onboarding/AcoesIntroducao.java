@@ -14,7 +14,12 @@ public class AcoesIntroducao extends TelaIndroducao {
 
 	public void clicarBotaoIntroducao() throws InterruptedException{
 		Utils.aguardarSegundos(20);
-		botaoPularIntroducao.click();
-		Utils.log("Pular Indrodução");
+		try {
+			botaoPularIntroducao.click();
+			Utils.log("Pular Indrodução");
+		} catch (Exception e) {
+			Utils.log("Tela de Introdução não apresentada!");
+		}
+		
 	}
 }

@@ -7,7 +7,7 @@ Como usuário
 Eu quero comprar alguns produtos
 
 @TestAPP001  
-Cenário: Verificar a desistencia da compra de produtos e cancelamento da sacola.
+Cenário: Verificar a desistencia da compra de produtos e limpeza da sacola com usuário logado.
 Dado que estou logado no aplicativo do Ze  
 E que realizo a pesquisa do produto "Heineken"  
 E seleciono o item "Heineken 330ml" da lista
@@ -16,7 +16,7 @@ E valido a sacola de produtos
 Entao desisto dos produtos e limpo a sacola
 
 @TestAPP002
-Cenário: Verificar ao logar a desistencia da compra de produtos e cancelamento da sacola.
+Cenário: Verificar ao logar a desistencia da compra de produtos e limpeza da sacola.
 Dado que efetuo login no aplicativo do Ze
 E que estou logado no aplicativo do Ze 
 E que realizo a pesquisa do produto "Becks"  

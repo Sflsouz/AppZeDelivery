@@ -12,7 +12,8 @@ public class AcoesDetalhesPedido extends TelaDetalhesPedido {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void clicoNoBotaoVerProdutos() {
+	public void clicoNoBotaoVerProdutos() throws InterruptedException {
+		Utils.aguardarSegundos(6);
 		Utils.aguardarElementoVisivel(botaoVerProdutos);
 		botaoVerProdutos.click();
 	}

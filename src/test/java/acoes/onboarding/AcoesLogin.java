@@ -1,5 +1,6 @@
 package acoes.onboarding;
 
+import aplicacao.Setup;
 import apoio.Utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -16,8 +17,8 @@ public class AcoesLogin extends TelaLogin {
 		Utils.aguardarElementoVisivel(botaoEntrarConta);
 		botaoEntrarConta.click();
 		Utils.aguardarElementoVisivel(campoEmail);
-		campoEmail.sendKeys("");
-		campoSenha.sendKeys("");
+		campoEmail.sendKeys(Setup.getEmail());
+		campoSenha.sendKeys(Setup.getSenha());
 		botaoEntrar.click();
 		Utils.log("Login efetuado!");
 	}

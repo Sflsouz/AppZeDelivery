@@ -30,5 +30,15 @@ public class AcoesVitrineProdutos extends TelaVitrineProdutos{
 		botaoPerfil.click();
 		Utils.log(acao +": Clique no botão Perfil");
 	}
+	
+	public void validarPopUp() {
+		try {
+			Utils.aguardarElementoVisivel(botaoPopUp,5);
+			botaoPopUp.click();
+		} catch (Exception e) {
+			Utils.log(acao +": Sem PopUp Desconto");
+		}
+		
+	}
 
 }

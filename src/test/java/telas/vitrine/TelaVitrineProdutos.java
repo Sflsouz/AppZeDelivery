@@ -28,4 +28,8 @@ public class TelaVitrineProdutos extends TelaApp {
 	@AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"menu-edit-address\"]/android.widget.TextView[2]")
 	@iOSXCUITFindBy(id = "x")
 	public MobileElement  labelCep;
+	
+	@AndroidFindBy(accessibility = "submit-button")
+	@iOSXCUITFindBy(id = "x")
+	public MobileElement  botaoPopUp;
 }

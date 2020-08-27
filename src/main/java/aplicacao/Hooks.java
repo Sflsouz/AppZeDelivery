@@ -2,9 +2,12 @@ package aplicacao;
 
 import java.io.IOException;
 import java.net.URL;
+
+import apoio.Print;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -23,7 +26,8 @@ public class Hooks {
 	}
 
 	@After
-	public void FecharApp() throws InterruptedException {
+	public void FecharApp(Scenario scenario) throws InterruptedException {
+		Print.printarTela(scenario);
 		if (driver != null) {
 			driver.quit();
 		}

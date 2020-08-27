@@ -27,7 +27,7 @@ public class AcoesConfirmacaoCompraProduto extends TelaConfirmacaoCompraProduto 
 		if (Contexto.qtdProduto == qtd) {
 			Utils.log(acao +": Quandidade de Produtos validados.");
 		} else {
-			throw new Exception(acao +": Quandidade de Produtos invalidos.");
+			throw new Exception(acao + " : Esperado: " + Contexto.qtdProduto + " : Recebido: "+ qtd);
 		}
 	}
 
@@ -37,7 +37,7 @@ public class AcoesConfirmacaoCompraProduto extends TelaConfirmacaoCompraProduto 
 		if (Contexto.totalPedido == total) {
 			Utils.log(acao +": Total dos Produtos validado.");
 		} else {
-			throw new Exception(acao +": Total dos produtos está diferente da compra!");
+			throw new Exception(acao + " : Esperado: " + total + " : Recebido: "+ Contexto.totalPedido);
 		}
 	}
 }

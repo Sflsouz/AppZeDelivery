@@ -59,7 +59,7 @@ public class AcoesCompraProduto extends TelaCompraProduto {
 		if(Contexto.totalPedido == total) {
 			Utils.log(acao +": Total dos Produtos validado.");
 		}else {
-		throw new Exception(acao +": Total dos produtos está incorreto!");
+			throw new Exception(acao + " : Esperado: " + total + " : Recebido: "+ Contexto.totalPedido);
 		}
 	}
 }

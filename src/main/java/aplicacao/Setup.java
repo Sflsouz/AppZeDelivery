@@ -21,6 +21,8 @@ public class Setup {
 	private String autoAcceptAlerts;
 	private boolean noReset;
 	private String app;
+	private static String email;
+	private static String senha;
 	private static String plataforma;
 	private static String APPID;
 
@@ -85,6 +87,22 @@ public class Setup {
 	public void setPlataforma(String _plataforma) {
 		Setup.plataforma = _plataforma;
 	}
+	
+	public static String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String _email) {
+		Setup.email = _email;
+	}
+	
+	public static String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String _senha) {
+		Setup.senha = _senha;
+	}
 
 	public void lerArquivoProperties() throws IOException {
 		Properties properties = new Properties();
@@ -92,6 +110,8 @@ public class Setup {
 		properties.load(file);
 		setPlataforma(properties.getProperty("properties.plataforma").toUpperCase());
 		setAPPID(properties.getProperty("properties.apiKey").toUpperCase());
+		setEmail(properties.getProperty("properties.email"));
+		setSenha(properties.getProperty("properties.senha"));
 	}
 
 	public void definirPlataformaMobile() throws IOException {

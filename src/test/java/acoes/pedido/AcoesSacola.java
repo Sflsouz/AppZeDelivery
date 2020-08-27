@@ -30,7 +30,7 @@ public class AcoesSacola extends TelaSacola {
 
 	}
 
-	public void limparSacola() {
+	public void limparSacola() throws InterruptedException {
 		Utils.aguardarElementoVisivel(labelSubtotal);
 		Utils.aguardarElementoVisivel(labelTotal);
 		Utils.scroll(0.2,0.5);
@@ -38,6 +38,7 @@ public class AcoesSacola extends TelaSacola {
 		botaoLimparSacola.click();
 		botaoConfirmacaoLimparSacola.click();
 		Utils.log(acao + ": Excluindo Produtos");
+		Utils.aguardarSegundos(2);
 		Utils.aguardarElementoVisivel(labelSacolaVazia);
 		assertEquals("Putz, está vazia!", labelSacolaVazia.getText());
 	}
@@ -53,7 +54,7 @@ public class AcoesSacola extends TelaSacola {
 		if (Contexto.precoProduto == preco) {
 			Utils.log(acao + ": Preco do produto validado");
 		} else {
-			throw new Exception(acao + " : Preco do Produto diferente da compra");
+			throw new Exception(acao + " : Esperado: " + Contexto.precoProduto + " : Recebido: "+ preco);
 		}
 	}
 
@@ -62,7 +63,7 @@ public class AcoesSacola extends TelaSacola {
 		if (Contexto.qtdProduto == qtd) {
 			Utils.log(acao + ": Quantidade de Produtos validado");
 		} else {
-			throw new Exception(acao + " : Quantidade de Produtos diferente da compra");
+			throw new Exception(acao + " : Esperado: " + Contexto.qtdProduto + " : Recebido: "+ qtd);
 		}
 	}
 	public void validarCep() throws Exception {
@@ -76,7 +77,7 @@ public class AcoesSacola extends TelaSacola {
 		if (Contexto.totalPedido == subtotal) {
 			Utils.log(acao + ": Subtotal validado");
 		} else {
-			throw new Exception(acao + " : Subtotal diferente do total de produtos");
+			throw new Exception(acao + " : Esperado: " + Contexto.totalPedido + " : Recebido: "+ subtotal);
 		}
 	}
 
@@ -88,7 +89,7 @@ public class AcoesSacola extends TelaSacola {
 		if (String.valueOf(total).equals(soma)) {
 			Utils.log(acao + ": Total validado");
 		} else {
-			throw new Exception(acao + " : Total invalido");
+			throw new Exception(acao + " : Esperado: " + soma + " : Recebido: "+ total);
 		}
 	}
 }

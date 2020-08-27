@@ -12,6 +12,7 @@ public class PerfilSteps {
 	
 	@Dado("que estou logado no aplicativo do Ze")
 	public void que_estou_logado_aplicavo_Ze() {
+		vitrineProdutos.validarPopUp();
 		vitrineProdutos.clicarBotaoPerfil();
 		dadosPerfil.validarMeuPerfil();
 	}

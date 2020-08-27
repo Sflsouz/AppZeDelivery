@@ -31,6 +31,11 @@ public class Utils {
 		new WebDriverWait(Hooks.driver, 20).until(ExpectedConditions.visibilityOf(element));
 		
 	}
+	
+	public static void aguardarElementoVisivel(MobileElement element, int segundos) {
+		new WebDriverWait(Hooks.driver, 5).until(ExpectedConditions.visibilityOf(element));
+		
+	}
 
 	public static void fecharTeclado() {
 		Hooks.driver.hideKeyboard();
@@ -43,7 +48,8 @@ public class Utils {
 		return valor;
 	}
 
-	public static void scroll(double inicio, double fim) {
+	public static void scroll(double inicio, double fim) throws InterruptedException {
+		aguardarSegundos(2);
 		Dimension size = Hooks.driver.manage().window().getSize();
 		int x = size.width / 2;
 		int start_y = (int) (size.height * inicio);

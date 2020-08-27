@@ -1,11 +1,11 @@
 {
   "automationName" : "UiAutomator2",
-  "udid": "330043b531b6743f",
-  "deviceName": "330043b531b6743f",
+  "udid": "emulator-5554",
+  "deviceName": "emulator-5554",
   "platformName": "Android",
   "appPackage": "com.cerveceriamodelo.modelonow",
   "appActivity": ".MainActivity",
-  "noReset": true,
+  "noReset": false,
   "app":"",
   "autoGrantPermissions": "true",
   "autoAcceptAlerts": "true"

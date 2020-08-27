@@ -71,7 +71,7 @@ public class AcoesFormaPagamento extends TelaFormaPagamento {
 		if (Contexto.totalPedido == subtotal) {
 			Utils.log(acao + ": Subtotal validado");
 		} else {
-			throw new Exception(acao + " : Subtotal diferente do total de produtos");
+			throw new Exception(acao + " : Esperado: " + Contexto.totalPedido + " : Recebido: "+ subtotal);
 		}
 	}
 
@@ -83,7 +83,7 @@ public class AcoesFormaPagamento extends TelaFormaPagamento {
 		if (String.valueOf(total).equals(soma)) {
 			Utils.log(acao + ": Total validado");
 		} else {
-			throw new Exception(acao + " : Total invalido");
+			throw new Exception(acao + " : Esperado: " + soma + " : Recebido: "+ total);
 		}
 	}
 
