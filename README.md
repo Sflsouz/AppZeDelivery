@@ -51,7 +51,7 @@ Para Executar a automação será necessário a instalação das seguintes ferra
  @TestAPP003   
  Cenário: Verificar a finalização da compra de produtos
  
- Obs.: para Executar o Cenário TestAPP002, que faz o login antes de efetuar a compra, é necessário alterar a capabilites "noRest"  para False
+ Obs.: para Executar o Cenário TestAPP002, que faz o login antes de efetuar a compra, é necessário alterar a capabilites "noReset"  para false
  para o aplicativo abrir sem cache.
  
  Para os Cenarios de API de clima, foram criados 9 Cenários na feature ApiClimaTempo.
