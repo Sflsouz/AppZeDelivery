@@ -1,10 +1,10 @@
-# AutomaÁ„o AppZeDelivery - Desenvolvida por sflsouz
-# AutomaÁ„o Mobile Android Realizada na Linguagem JAVA/Eclipse com Cucumber
+# Automa√ß√£o AppZeDelivery
+#Automa√ß√£o Mobile Android Realizada na Linguagem JAVA/Eclipse com Cucumber - - Desenvolvida por sflsouz
 
-#PreparaÁ„o Ambiente
+# Prepara√ß√£o Ambiente
 
-*InstalaÁ„o
-Para Executar a automaÁ„o ser· necess·rio a instalaÁ„o das seguintes ferramentas:
+*Instala√ß√£o
+Para Executar a automa√ß√£o ser√° necess√°rio a instala√ß√£o das seguintes ferramentas:
 - Eclipse
 - Android Studio + SDK + Simulador Android 9.0
 - Appium 1.15
@@ -19,40 +19,40 @@ Para Executar a automaÁ„o ser· necess·rio a instalaÁ„o das seguintes ferramentas
    -C:\Users\nameUser\AppData\Local\Android\Sdk\platform-tools
    -C:\Program Files\nodejs\
    
- *ConfiguraÁıes Projeto
- - O projeto possui um arquivo properties, onde È necess·rio passar algums informaÁıes para execuÁ„o do projeto
+ *Configura√ß√µes Projeto
+ - O projeto possui um arquivo properties, onde √© necess√°rio passar algums informa√ß√µes para execu√ß√£o do projeto
   properties.plataforma = Android
   properties.apiKey = chaveAPIClima
   properties.email = email@email.com
   properties.senha = password  
   
-  - plataforma - Pode receber parametro "Android" para exeucuÁ„o dos Testes Mobile,ou "API" para execuÁ„o dos testes de serviÁo
-  - apiKey - Deve ser passado a Key da API de clima para execuÁ„o
+  - plataforma - Pode receber parametro "Android" para exeucu√ß√£o dos Testes Mobile,ou "API" para execu√ß√£o dos testes de servi√ßo
+  - apiKey - Deve ser passado a Key da API de clima para execu√ß√£o
   - email - Deve ser passado o email, caso queira logar no app
   - senha - Deve ser passado o senha, caso queira logar no app
   
-  As capabilites s„o configuradas no arquivo Android.json no projeto.
+  As capabilites s√£o configuradas no arquivo Android.json no projeto.
   
  *Entendimento do Projeto
-  Necess·rio que o aplicativo do ZÈ j· esteja instalado no aparelho Simulador, ou Device fisico.
-  O projeto tambÈm possui uma pasta evidÍncias onde s„o armazenados os prints do cenarios que falharam.
-  Um arquivo de log È gerado no caminho C:\Users\Public - log4j-application.log
+  Necess√°rio que o aplicativo do Z√© j√° esteja instalado no aparelho Simulador, ou Device fisico.
+  O projeto tamb√©m possui uma pasta evid√™ncias onde s√£o armazenados os prints do cenarios que falharam.
+  Um arquivo de log √© gerado no caminho C:\Users\Public - log4j-application.log
   
-  Foram criados 3 Cen·rios de Tentativa de compra para Android na Feature CompraProdutos.feature
-  Como o Ambiente È de produÁ„o, nenhum dos cen·rios efetivam a compra.
+  Foram criados 3 Cen√°rios de Tentativa de compra para Android na Feature CompraProdutos.feature
+  Como o Ambiente √© de produ√ß√£o, nenhum dos cen√°rios efetivam a compra.
  
  @TestAPP001  
- Cen·rio: Verificar a desistencia da compra de produtos e limpeza da sacola com usu·rio logado.
+ Cen√°rio: Verificar a desistencia da compra de produtos e limpeza da sacola com usu√°rio logado.
  
  @TestAPP002
- Cen·rio: Verificar ao logar a desistencia da compra de produtos e limpeza da sacola.
+ Cen√°rio: Verificar ao logar a desistencia da compra de produtos e limpeza da sacola.
 
  @TestAPP003   
- Cen·rio: Verificar a finalizaÁ„o da compra de produtos
+ Cen√°rio: Verificar a finaliza√ß√£o da compra de produtos
  
- Obs.: para Executar o Cen·rio TestAPP002, que faz o login antes de efetuar a compra, È necess·rio alterar a capabilites "noRest"  para False
+ Obs.: para Executar o Cen√°rio TestAPP002, que faz o login antes de efetuar a compra, √© necess√°rio alterar a capabilites "noRest"  para False
  para o aplicativo abrir sem cache.
  
- Para os Cenarios de API de clima, foram criados 9 Cen·rios na feature ApiClimaTempo.
+ Para os Cenarios de API de clima, foram criados 9 Cen√°rios na feature ApiClimaTempo.
  
  Obrigado! Bons testes!
