@@ -1,4 +1,4 @@
 properties.plataforma = Android
-properties.apiKey = chaveAPIClima
+properties.apiKey = chaveapi
 properties.email = email@email.com
 properties.senha = password

@@ -80,7 +80,7 @@ public class Setup {
 		return app;
 	}
 
-	public String getPlataforma() {
+	public static String getPlataforma() {
 		return plataforma;
 	}
 

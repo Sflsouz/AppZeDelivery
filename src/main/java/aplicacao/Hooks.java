@@ -27,9 +27,11 @@ public class Hooks {
 
 	@After
 	public void FecharApp(Scenario scenario) throws InterruptedException {
-		Print.printarTela(scenario);
-		if (driver != null) {
-			driver.quit();
+		if (Setup.getPlataforma().equals("ANDROID")) {
+			Print.printarTela(scenario);
+			if (driver != null) {
+				driver.quit();
+			}
 		}
 	}
 

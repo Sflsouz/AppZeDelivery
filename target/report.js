@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Funcionalidade"
 });
 formatter.scenario({
-  "name": "Verificar ao logar a desistencia da compra de produtos e cancelamento da sacola.",
+  "name": "Verificar a desistencia da compra de produtos e limpeza da sacola com usuário logado.",
   "description": "",
   "keyword": "Cenário",
   "tags": [
     {
-      "name": "@TestAPP002"
+      "name": "@TestAPP001"
     }
   ]
 });
@@ -18,18 +18,8 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "que efetuo login no aplicativo do Ze",
-  "keyword": "Dado "
-});
-formatter.match({
-  "location": "OnboardingSteps.executo_api_clima_cidade_unidade()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
   "name": "que estou logado no aplicativo do Ze",
-  "keyword": "E "
+  "keyword": "Dado "
 });
 formatter.match({
   "location": "PerfilSteps.que_estou_logado_aplicavo_Ze()"
@@ -38,7 +28,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "que realizo a pesquisa do produto \"Becks\"",
+  "name": "que realizo a pesquisa do produto \"Heineken\"",
   "keyword": "E "
 });
 formatter.match({
@@ -48,7 +38,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "seleciono o item \"Becks 330ml\" da lista",
+  "name": "seleciono o item \"Heineken 330ml\" da lista",
   "keyword": "E "
 });
 formatter.match({
@@ -58,11 +48,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "efetuo a compra de 4 unidades do produto",
+  "name": "efetuo a compra de seis unidades do produto",
   "keyword": "Quando "
 });
 formatter.match({
-  "location": "PedidosSteps.compra_unidades_produto(int)"
+  "location": "PedidosSteps.compra_seis_unidades_produto()"
 });
 formatter.result({
   "status": "passed"

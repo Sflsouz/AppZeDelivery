@@ -5,7 +5,7 @@
   "platformName": "Android",
   "appPackage": "com.cerveceriamodelo.modelonow",
   "appActivity": ".MainActivity",
-  "noReset": false,
+  "noReset": true,
   "app":"",
   "autoGrantPermissions": "true",
   "autoAcceptAlerts": "true"
